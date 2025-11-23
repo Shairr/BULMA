@@ -1,0 +1,57 @@
+ /* Estilo general del cuerpo */
+ body {
+     background-color: hsla(153, 49%, 58%, 1.00);
+ }
+
+ /* * Simulación de Skeleton/Carga (Componente de estado de carga)
+         * El usuario solicitó Skeletons. Bulma no tiene un componente nativo,
+         * así que lo simulamos con una animación simple en CSS.
+         */
+ @keyframes pulse {
+     0% {
+         background-color: hsl(0, 0%, 90%);
+     }
+
+     50% {
+         background-color: hsl(0, 0%, 95%);
+     }
+
+     100% {
+         background-color: hsl(0, 0%, 90%);
+     }
+ }
+
+ .skeleton-box {
+     height: 1rem;
+     margin-bottom: 0.5rem;
+     border-radius: 4px;
+     /* Aplicamos la animación de carga */
+     animation: pulse 1.5s infinite ease-in-out;
+ }
+
+ .skeleton-box.is-large {
+     height: 2.5rem;
+     width: 70%;
+ }
+
+ .skeleton-box.is-medium {
+     width: 85%;
+ }
+
+ .skeleton-box.is-small {
+     width: 40%;
+ }
+
+ .card-skeleton {
+     height: 200px;
+     padding: 1.5rem;
+     border: 1px solid #dbdbdb;
+     border-radius: 6px;
+     margin-top: 1rem;
+ }
+
+ /* Estilo para el icono de corazón en el footer */
+ .footer-heart {
+     color: hsl(0, 96%, 47%);
+     /* Color Bulma 'danger' */
+ }

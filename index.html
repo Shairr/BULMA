@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración inicial y metaetiquetas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Explorando el Futuro</title>
+
+    <!-- 1. Carga del Framework Bulma (CSS) -->
+    <!-- Bulma es un framework de CSS modular y moderno basado en Flexbox. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- 2. Carga de Font Awesome para los iconos -->
+    <!-- Bulma utiliza Font Awesome por defecto para su sistema de iconos. -->
+    <script src="https://kit.fontawesome.com/a2d338600f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/bulma.css">
+
+</head>
+<body>
+
+    <!--
+    ================================================
+    1. NAV BAR (RESPONSIVE)
+    ================================================
+    Componente 'navbar' de Bulma. Es responsive por CSS.
+    El 'navbar-burger' está presente, pero sin JS para activarlo.
+    -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item is-size-4 has-text-weight-bold" href="#">
+                <span class="has-text-info">Tech</span><span class="has-text-light">Nova</span>
+            </a>
+
+            <!-- Ícono de menú (navbar-burger) para la vista móvil (No funcional sin JS) -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">Inicio</a>
+                <a class="navbar-item">Artículos</a>
+                <a class="navbar-item">Inteligencia Artificial</a>
+                <a class="navbar-item">Desarrollo Web</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--
+    ================================================
+    2. HERO (Encabezado principal con propósito usable)
+    ================================================
+    Componente Hero de Bulma para una cabecera prominente.
+    Usa 'is-info' para color y 'is-medium' para tamaño.
+    -->
+    <section class="hero is-info is-medium">
+        <div class="hero-body">
+            <p class="title is-size-1">
+                El Pulso de la Tecnología
+            </p>
+            <p class="subtitle is-4">
+                Noticias frescas, análisis profundos y las últimas tendencias del mundo digital.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <!--
+            ================================================
+            3. COLUMNAS Y BOTONES (Propósito Usable: Artículos Destacados)
+            ================================================
+            Uso de 'columns' para un diseño responsive de 3 tarjetas de artículo (33%/33%/33%).
+            -->
+            <h2 class="title is-3 has-text-centered mb-6">Artículos Destacados</h2>
+            
+            <div class="columns is-multiline is-variable is-5">
+                
+                <!-- Artículo 1: IA Generativa -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-5">El Auge de la IA Generativa</p>
+                            <p class="subtitle is-7 has-text-grey">hace 3 horas | Por Jane Doe</p>
+                            <div class="content">
+                                Exploramos cómo los modelos de lenguaje y visión están redefiniendo la creatividad y el desarrollo de software.
+                            </div>
+                            <!-- Botón con icono (Bulma Icon structure) -->
+                            <a class="button is-link is-outlined is-small">
+                                <span class="icon is-small">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i> <!-- Ícono de flecha -->
+                                </span>
+                                <span>Leer Artículo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artículo 2: Web Assembly -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-5">Web Assembly: El Futuro del Rendimiento</p>
+                            <p class="subtitle is-7 has-text-grey">hace 1 día | Por John Smith</p>
+                            <div class="content">
+                                ¿Cómo WebAssembly está llevando el rendimiento de aplicaciones de escritorio al navegador web? Un análisis técnico.
+                            </div>
+                            <!-- Botón con icono -->
+                            <a class="button is-link is-outlined is-small">
+                                <span class="icon is-small">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </span>
+                                <span class ="button is-small is-danger is-outlined">Leer Artículo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artículo 3: Seguridad en la Nube -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-5">10 Tips para la Seguridad en la Nube</p>
+                            <p class="subtitle is-7 has-text-grey">hace 2 días | Por Alex V.</p>
+                            <div class="content">
+                                Una guía esencial para desarrolladores y SysAdmins para proteger sus infraestructuras en AWS, Azure y GCP.
+                            </div>
+                            <!-- Botón con icono -->
+                            <a class="button is-link is-outlined is-small">
+                                <span class="icon is-small">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </span>
+                                <span>Leer Artículo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--
+            ================================================
+            4. COLUMNAS ASIMÉTRICAS (Contenido 8/4 y Sidebar)
+            ================================================
+            Muestra una disposición 2/3 y 1/3, ideal para contenido y barra lateral.
+            En móvil, las columnas se apilan automáticamente.
+            -->
+            <div class="block mt-6 pt-6">
+                <h2 class="title is-3 has-text-centered mb-5">Novedades y Anuncios (Columnas 8/4)</h2>
+                <div class="columns is-variable is-6">
+                    
+                    <!-- Columna Principal (is-two-thirds, 8/12 partes del ancho total) -->
+                    <div class="column is-two-thirds">
+                        <div class="box has-background-white p-5">
+                            <p class="title is-4 has-text-primary">Anuncio Principal: La Nube Híbrida</p>
+                            <p class="subtitle is-6">Dos tercios del espacio para el contenido extenso.</p>
+                            <div class="content">
+                                La tendencia de la nube híbrida se consolida. Las empresas están buscando soluciones flexibles que permitan combinar la eficiencia de la nube pública con la seguridad y el control de los entornos privados. Esto requiere nuevas arquitecturas y herramientas de orquestación avanzadas.
+                                <br><br>
+                                <a class="button is-info is-small">
+                                    <span class="icon is-small"><i class="fas fa-search"></i></span>
+                                    <span>Investigar Más</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Barra Lateral (is-one-third, 4/12 partes del ancho total) -->
+                    <div class="column is-one-third">
+                        <div class="box has-background-light p-4">
+                            <p class="title is-5">Anuncios Breves</p>
+                            <ul class="is-size-6">
+                                <li><span class="icon is-small has-text-success"><i class="fas fa-check"></i></span> Nuevo evento de IA el próximo mes.</li>
+                                <li><span class="icon is-small has-text-success"><i class="fas fa-check"></i></span> Guía de Bulma 1.0 lanzada.</li>
+                                <li><span class="icon is-small has-text-success"><i class="fas fa-check"></i></span> Podcast de la semana disponible.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!--
+            ================================================
+            5. NUEVO: COLUMNAS 4/4 (Widgets de Información Rápida)
+            ================================================
+            Usa 4 columnas, cada una ocupando el 25% del ancho total.
+            Bulma las hace iguales automáticamente, y se apilan en móvil.
+            -->
+            <div class="block mt-6 pt-6">
+                <h2 class="title is-3 has-text-centered mb-5">Widgets de Información Rápida</h2>
+                <div class="columns is-variable is-4">
+                    
+                    <!-- Columna 1 (25% de ancho) -->
+                    <div class="column">
+                        <div class="box has-background-primary-light has-text-centered">
+                            <span class="icon is-large has-text-primary"><i class="fas fa-wrench fa-2x"></i></span>
+                            <p class="title is-5 mt-2">Herramientas</p>
+                            <p class="subtitle is-7">Guías de configuración</p>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2 (25% de ancho) -->
+                    <div class="column">
+                        <div class="box has-background-link-light has-text-centered">
+                            <span class="icon is-large has-text-link"><i class="fas fa-bell fa-2x"></i></span>
+                            <p class="title is-5 mt-2">Alertas</p>
+                            <p class="subtitle is-7">Notificaciones recientes</p>
+                        </div>
+                    </div>
+
+                    <!-- Columna 3 (25% de ancho) -->
+                    <div class="column">
+                        <div class="box has-background-danger-light has-text-centered">
+                            <span class="icon is-large has-text-danger"><i class="fas fa-shield-alt fa-2x"></i></span>
+                            <p class="title is-5 mt-2">Seguridad</p>
+                            <p class="subtitle is-7">Reporte de vulnerabilidades</p>
+                        </div>
+                    </div>
+
+                    <!-- Columna 4 (25% de ancho) -->
+                    <div class="column">
+                        <div class="box has-background-success-light has-text-centered">
+                            <span class="icon is-large has-text-success"><i class="fas fa-code fa-2x"></i></span>
+                            <p class="title is-5 mt-2">Código Abierto</p>
+                            <p class="subtitle is-7">Proyectos destacados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!--
+            ================================================
+            6. SKELETON (Simulación de Carga para Artículos Recientes)
+            ================================================
+            Muestra el estado de carga que desaparecería una vez que se obtengan los datos.
+            (NOTA: Se movió de posición 5 a 6 para dar espacio a la nueva sección de columnas)
+            -->
+            <div class="block mt-6">
+                <h2 class="title is-4 mb-5">Cargando Artículos Recientes...</h2>
+                <div class="columns is-multiline is-variable is-3">
+                    <div class="column is-one-third">
+                        <div class="card-skeleton has-background-white p-4">
+                            <!-- Simulación del título (is-large) -->
+                            <div class="skeleton-box is-size-6"></div> 
+                            <!-- Simulación de fecha/autor (is-small) -->
+                            <div class="skeleton-box is-small"></div>
+                            <!-- Simulación de líneas de texto (is-medium, normal) -->
+                            <div class="skeleton-box is-medium mt-5"></div>
+                            <div class="skeleton-box"></div>
+                            <div class="skeleton-box is-small"></div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card-skeleton has-background-white p-4">
+                            <div class="skeleton-box is-large"></div> 
+                            <div class="skeleton-box is-small"></div>
+                            <div class="skeleton-box is-medium mt-5"></div>
+                            <div class="skeleton-box"></div>
+                            <div class="skeleton-box is-small"></div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card-skeleton has-background-white p-4">
+                            <div class="skeleton-box is-large"></div> 
+                            <div class="skeleton-box is-small"></div>
+                            <div class="skeleton-box is-medium mt-5"></div>
+                            <div class="skeleton-box"></div>
+                            <div class="skeleton-box is-small"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            ================================================
+            7. BOTONES E ICONOS (Ejemplo de CTA Secundario)
+            ================================================
+            Uso de Bulma para crear un Call-to-Action (CTA) secundario con diversos iconos.
+            (NOTA: Se movió de posición 6 a 7)
+            -->
+            <div class="block has-text-centered mt-6 pt-6">
+                <h3 class="title is-link">¿Quieres más contenido?</h3>
+                <div class="buttons is-centered">
+                    
+                    <!-- Botón de Suscripción -->
+                    <a class="button is-primary is-medium">
+                        <span class="icon">
+                            <i class="fas fa-rss" aria-hidden="true"></i> 
+                        </span>
+                        <span>Suscribirme al Newsletter</span>
+                    </a>
+                    
+                    <!-- Botón con icono de Carga/Spinner (is-loading) -->
+                    <button class="button is-warning is-light is-loading">Cargando comentarios...</button>
+
+                    <!-- Botón de Cerrar (Ejemplo) -->
+                    <button class="button is-danger is-outlined">
+                        <span class="icon">
+                            <i class="fas fa-times" aria-hidden="true"></i> <!-- Ícono de Cerrar (X) -->
+                        </span>
+                        <span>Cerrar Sesión</span>
+                    </button>
+                    
+                </div>
+                
+                <!-- Icono de Like independiente, demostrando Sass Mixins -->
+                <p class="subtitle is-6 mt-5">¡Dale un <span class="icon has-text-danger"><i class="fas fa-heart" aria-hidden="true"></i></span> si te gusta la tecnología!</p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer simple de Bulma -->
+    <footer class="footer mt-6">
+        <div class="content has-text-centered">
+            <p>
+                Diseñado con <span class="footer-heart icon"><i class="fas fa-heart"></i></span> y Bulma.
+                La estructura <strong class="has-text-info">responsive</strong> está garantizada por el framework.
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
